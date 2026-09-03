@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="801">
+	<kit name="h3d_batch_xt_lxo" restart="YES">
+		<source target="h3d_batch_xt_lxo/index.CFG">index.CFG</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_cad_to_lxo.py">scripts/convert_cad_to_lxo.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_OBJ.py">scripts/convert_OBJ.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_X_T.py">scripts/convert_X_T.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/set_dir_files_ui_command.py">scripts/set_dir_files_ui_command.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/set_dir_ui_command.py">scripts/set_dir_ui_command.py</source>
+	</kit>
+	<message button="Help">h3d_batch_xt_lxo Kit installation complete.</message>
+</package>
