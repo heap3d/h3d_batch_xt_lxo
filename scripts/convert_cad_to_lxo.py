@@ -32,8 +32,10 @@ def process_files(dir_path: str, file_format: FileFormat) -> int:
         print('No files found.')
         return 0
 
+    monitor = lx.Monitor(len((files)))
     for file in files:
         process_file(file, file_format, dir_path)
+        monitor.step()
 
     return len(files)
 
