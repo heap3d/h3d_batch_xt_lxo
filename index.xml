@@ -3,8 +3,9 @@
 	<kit name="h3d_batch_xt_lxo" restart="YES">
 		<source target="h3d_batch_xt_lxo/index.CFG">index.CFG</source>
 		<source target="h3d_batch_xt_lxo/scripts/convert_cad_to_lxo.py">scripts/convert_cad_to_lxo.py</source>
-		<source target="h3d_batch_xt_lxo/scripts/convert_OBJ.py">scripts/convert_OBJ.py</source>
-		<source target="h3d_batch_xt_lxo/scripts/convert_X_T.py">scripts/convert_X_T.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_LXO_to_OBJ.py">scripts/convert_LXO_to_OBJ.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_OBJ_to_LXO.py">scripts/convert_OBJ_to_LXO.py</source>
+		<source target="h3d_batch_xt_lxo/scripts/convert_X_T_to_LXO.py">scripts/convert_X_T_to_LXO.py</source>
 		<source target="h3d_batch_xt_lxo/scripts/set_dir_files_ui_command.py">scripts/set_dir_files_ui_command.py</source>
 		<source target="h3d_batch_xt_lxo/scripts/set_dir_ui_command.py">scripts/set_dir_ui_command.py</source>
 	</kit>
