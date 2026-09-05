@@ -6,13 +6,14 @@
 import lx
 import modo
 
-from h3d_batch_xt_lxo.scripts.convert_cad_to_lxo import FileFormat, process_files
-from h3d_batch_xt_lxo.scripts.set_dir_ui_command import CAD_FILES_DIR_USER_VALUE_NAME
-
 from h3d_utilites.scripts.h3d_utils import execution_time_alarm, get_user_value
 
+from h3d_batch_xt_lxo.scripts.convert_cad_to_lxo import FileFormat, convert_scene
+from h3d_batch_xt_lxo.scripts.set_dir_ui_command import CAD_FILES_DIR_USER_VALUE_NAME
+from h3d_batch_xt_lxo.scripts.convert_OBJ_to_LXO import save_lxo, SAVE_LXO_EXT
 
-X_T_EXTENSIONS = ('.x_t', '.x_b',)
+
+LOAD_XT_EXT = ('.x_t', '.x_b',)
 
 
 def open_x_t(file: str) -> None:
@@ -22,11 +23,11 @@ def open_x_t(file: str) -> None:
 
 @execution_time_alarm('Converting .x_t files to .lxo')
 def main():
-    file_format = FileFormat(extensions=X_T_EXTENSIONS, open_file_func=open_x_t)
+    xt_lxo_handler = FileFormat(load_ext=LOAD_XT_EXT, open_scene=open_x_t, save_ext=SAVE_LXO_EXT, save_scene=save_lxo)
     dir_path = get_user_value(CAD_FILES_DIR_USER_VALUE_NAME)
 
     global numfiles
-    numfiles = process_files(dir_path, file_format)
+    numfiles = convert_scene(dir_path, xt_lxo_handler)
 
     print(f'{numfiles} files processed.')
 
